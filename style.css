@@ -1,10 +1,18 @@
+/* ==========================================
+   AMAZON CLONE - COMPLETE CSS
+   ========================================== */
+
 * {
     margin: 0;
-    font-family: Arial;
+    padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* ========== NAVBAR ========== */
+/* ==========================================
+   NAVBAR
+   ========================================== */
+
 .navbar {
     height: 60px;
     background-color: #0f1111;
@@ -13,8 +21,10 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 0 10px;
+    flex-wrap: nowrap;
 }
 
+/* Logo */
 .nav-logo {
     height: 50px;
     width: 100px;
@@ -30,6 +40,7 @@
 
 .border {
     border: 1.5px solid transparent;
+    padding: 5px 8px;
 }
 
 .border:hover {
@@ -39,102 +50,105 @@
 /* Address */
 .add-first {
     color: #cccccc;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     margin-left: 15px;
 }
 
 .add-second {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
     margin-left: 3px;
 }
 
 .add-icon {
     display: flex;
     align-items: center;
+    gap: 3px;
 }
 
 /* Search */
 .nav-search {
     display: flex;
-    justify-content: space-evenly;
-    background-color: pink;
-    width: 620px;
     height: 40px;
+    width: 620px;
     border-radius: 4px;
+    background: white;
     flex-shrink: 1;
 }
 
+.nav-search:hover {
+    border: 2px solid #febd69;
+}
+
 .search-select {
-    background-color: #f3f3f3;
     width: 50px;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
+    background: #f3f3f3;
     border: none;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    font-size: 12px;
+    padding: 0 5px;
 }
 
 .search-input {
     width: 100%;
-    font-size: 1rem;
     border: none;
     padding: 0 10px;
+    font-size: 14px;
+    outline: none;
 }
 
 .search-icon {
     width: 45px;
+    background: #febd69;
+    border-radius: 0 4px 4px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
-    background-color: #febd68;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
+    font-size: 18px;
     color: #0f1111;
     flex-shrink: 0;
 }
 
-.nav-search:hover {
-    border: 2px solid orange;
+.search-icon:hover {
+    background: #f3a847;
 }
 
-/* Language Selector */
+/* Language */
 .language-selector {
     display: flex;
     align-items: center;
-    gap: 5px;
-    background-color: #131921;
-    color: #ffffff;
+    gap: 4px;
     padding: 8px 10px;
-    cursor: pointer;
-    font-family: Arial, sans-serif;
     border: 1px solid transparent;
+    cursor: pointer;
     flex-shrink: 0;
 }
 
 .language-selector:hover {
-    border: 1px solid #ffffff;
+    border: 1px solid white;
 }
 
 .flag-icon {
     width: 20px;
-    height: auto;
-    display: block;
+    height: 15px;
+    object-fit: cover;
 }
 
 .lang-text {
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 .dropdown-arrow {
     font-size: 10px;
-    color: #cccccc;
-    margin-left: 2px;
+    color: #ccc;
 }
 
-/* Sign In */
+/* Sign In / Returns */
 span {
     font-size: 0.7rem;
+    color: #ccc;
 }
 
 .nav-second {
@@ -142,35 +156,49 @@ span {
     font-weight: 700;
 }
 
-.nav-signin, .nav-return {
+.nav-signin,
+.nav-return {
     flex-shrink: 0;
+    padding: 5px 6px;
 }
 
 /* Cart */
-.nav-cart i {
-    font-size: 30px;
-}
-
 .nav-cart {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     flex-shrink: 0;
+    padding: 5px 8px;
 }
 
-/* ========== PANEL ========== */
+.nav-cart i {
+    font-size: 28px;
+}
+
+/* ==========================================
+   PANEL
+   ========================================== */
+
 .panel {
     height: 40px;
-    background-color: #222f3d;
-    display: flex;
+    background: #222f3d;
     color: white;
+    display: flex;
     align-items: center;
     justify-content: space-evenly;
     padding: 0 10px;
 }
 
-.panel-ops p {
-    display: inline;
-    margin-left: 15px;
+.panel-all {
+    font-weight: 700;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 8px;
+    cursor: pointer;
 }
 
 .panel-ops {
@@ -178,12 +206,28 @@ span {
     font-size: 0.85rem;
 }
 
+.panel-ops p {
+    display: inline;
+    margin-left: 15px;
+    padding: 5px 6px;
+    cursor: pointer;
+}
+
+.panel-ops p:hover {
+    text-decoration: underline;
+}
+
 .panel-deals {
     font-size: 0.9rem;
     font-weight: 700;
+    padding: 5px 8px;
+    cursor: pointer;
 }
 
-/* ========== HERO ========== */
+/* ==========================================
+   HERO SECTION
+   ========================================== */
+
 .hero-section {
     background-image: url(hero_image.jpg);
     background-size: cover;
@@ -192,11 +236,11 @@ span {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 20px;
+    padding: 0 20px 20px;
 }
 
 .hero-msg {
-    background-color: white;
+    background: white;
     color: black;
     height: 40px;
     display: flex;
@@ -204,151 +248,194 @@ span {
     justify-content: center;
     font-size: 0.85rem;
     width: 80%;
-    margin-bottom: 25px;
+    max-width: 1400px;
     padding: 0 15px;
     text-align: center;
+    border-radius: 4px;
 }
 
 .hero-msg a {
     color: #007185;
     text-decoration: none;
+    font-weight: 600;
 }
 
-/* ========== SHOP ========== */
+.hero-msg a:hover {
+    color: #C7511F;
+}
+
+/* ==========================================
+   SHOP SECTION
+   ========================================== */
+
 .shop-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background-color: #e2e7e6;
-    padding: 10px;
+    background: #e2e7e6;
+    padding: 20px;
+    gap: 20px;
 }
 
 .box {
-    height: 400px;
     width: 23%;
-    background-color: white;
-    padding: 20px 0px 15px;
-    margin-top: 15px;
-    min-width: 200px;
+    min-width: 230px;
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.box-content h2 {
+    font-size: 21px;
+    color: #111;
+    margin-bottom: 10px;
 }
 
 .box-image {
     height: 300px;
     background-size: cover;
     background-position: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.box-content {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    border-radius: 4px;
+    margin: 10px 0;
 }
 
 .box-content p {
     color: #007185;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
 }
 
-/* ========== HOME ARRIVALS ========== */
+.box-content p:hover {
+    color: #C7511F;
+}
+
+/* ==========================================
+   HOME ARRIVALS CARD
+   ========================================== */
+
 .home-arrivals-card {
-    background-color: #ffffff;
-    width: 300px;
-    height: 400px;
+    width: 23%;
+    min-width: 230px;
+    background: white;
     padding: 20px;
-    margin-top: 15px;
-    box-sizing: border-box;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.home-arrivals-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .card-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0F1111;
-    margin-bottom: 12px;
-    line-height: 1.2;
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 15px;
 }
 
 .grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 12px;
-}
-
-.grid-item {
-    width: 48%;
-    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
 }
 
 .grid-image {
-    height: 100px;
-    background-color: #F0EEE9;
+    height: 120px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 6px;
+    border-radius: 4px;
 }
 
 .grid-label {
-    font-size: 14px;
-    color: #0F1111;
-    margin: 0;
-    line-height: 1.3;
+    font-size: 13px;
+    color: #111;
+    margin-top: 5px;
 }
 
 .shop-link {
     color: #007185;
     font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+    margin-top: 15px;
     cursor: pointer;
 }
 
-/* ========== FOOTER ========== */
+.shop-link:hover {
+    color: #C7511F;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
 footer {
     margin-top: 15px;
 }
 
 .foot-panel1 {
-    background-color: #37475a;
-    color: white;
     height: 50px;
+    background: #37475a;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.85rem;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.foot-panel1:hover {
+    background: #485769;
 }
 
 .foot-panel2 {
-    background-color: #222f3d;
+    background: #222f3d;
     color: white;
     display: flex;
     justify-content: space-evenly;
-    padding: 20px 0;
+    padding: 30px 20px;
+    flex-wrap: wrap;
 }
 
-ul {
-    margin-top: 25px;
+.foot-panel2 ul {
+    list-style: none;
+    margin-top: 10px;
 }
 
-ul p {
-    display: block;
-    font-size: 0.85rem;
+.foot-panel2 ul p {
+    font-size: 14px;
     margin-bottom: 10px;
-    margin-left: 10px;
     color: #dddddd;
+    font-weight: 400;
+}
+
+.foot-panel2 ul p b {
+    color: white;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 15px;
 }
 
 /* Footer Bottom */
 .footer-bottom-bar {
-    background-color: #232F3E;
+    background: #232F3E;
     border-top: 1px solid #3a4553;
     padding: 30px 20px;
-    box-sizing: border-box;
 }
 
 .footer-bottom-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
@@ -359,7 +446,9 @@ ul p {
 
 .logo-image {
     background-image: url(amazon_logo.png);
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 50px;
     width: 100%;
 }
@@ -374,146 +463,122 @@ ul p {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: transparent;
+    padding: 10px 18px;
     border: 1px solid #848d99;
-    border-radius: 3px;
-    padding: 10px 15px;
-    color: #ffffff;
+    border-radius: 4px;
+    color: white;
     font-size: 14px;
     cursor: pointer;
+    background: transparent;
 }
 
 .footer-selector:hover {
-    border-color: #ffffff;
-}
-
-.icon {
-    font-size: 16px;
-}
-
-.select-arrows {
-    font-size: 8px;
-    color: #848d99;
-    line-height: 1;
-    margin-left: 5px;
-}
-
-.currency-code {
-    font-weight: bold;
-}
-
-.selector-text {
-    white-space: nowrap;
+    border-color: white;
 }
 
 /* Also See */
 .footer-bottom-wrapper {
-    background-color: #0F1621;
+    background: #0F1621;
+    padding: 30px 20px;
 }
 
 .also-see-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 35px 30px 25px;
-    box-sizing: border-box;
-}
-
-.also-see-column {
-    width: 13.5%;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
+.also-see-column {
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .also-see-item h5 {
-    color: #ffffff;
+    color: white;
     font-size: 13px;
-    font-weight: bold;
-    margin: 0 0 4px 0;
+    margin-bottom: 4px;
 }
 
 .also-see-item p {
-    color: #999999;
-    font-size: 13px;
-    font-weight: normal;
+    color: #999;
+    font-size: 12px;
     line-height: 1.4;
-    margin: 0;
 }
 
 /* Legal */
 .footer-legal-section {
     text-align: center;
-    padding: 15px 20px 25px;
-    box-sizing: border-box;
+    padding: 20px;
 }
 
 .legal-links {
-    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     gap: 18px;
-    margin: 0 0 10px 0;
-    padding: 0;
+    list-style: none;
+    margin-bottom: 10px;
 }
 
 .legal-links li a {
-    color: #cccccc;
+    color: #ccc;
     font-size: 13px;
-    font-weight: normal;
     text-decoration: none;
 }
 
 .legal-links li a:hover {
+    color: white;
     text-decoration: underline;
-    color: #ffffff;
-}
-
-.ads-privacy {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.privacy-icon {
-    display: flex;
-    align-items: center;
 }
 
 .copyright-text {
-    color: #999999;
+    color: #999;
     font-size: 12px;
-    margin: 0;
 }
 
 /* ==========================================
-   ========== MOBILE RESPONSIVE ==========
+   RESPONSIVE - TABLET (max-width: 992px)
    ========================================== */
 
-/* ---------- TABLET (max-width: 992px) ---------- */
-@media(max-width: 992px) {
+@media (max-width: 992px) {
     .box {
         width: 45%;
-        height: auto;
-        min-height: 350px;
+        min-width: 200px;
     }
-    
+
+    .home-arrivals-card {
+        width: 45%;
+        min-width: 200px;
+    }
+
     .box-image {
         height: 220px;
     }
+
+    .nav-search {
+        width: 400px;
+    }
+
+    .also-see-column {
+        width: 22%;
+    }
 }
 
-/* ---------- MOBILE (max-width: 768px) ---------- */
-@media(max-width: 768px) {
-    /* Navbar */
+/* ==========================================
+   RESPONSIVE - MOBILE (max-width: 768px)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* ---- NAVBAR ---- */
     .navbar {
         height: auto;
         min-height: 55px;
         flex-wrap: wrap;
         padding: 6px 8px;
-        gap: 6px;
+        gap: 5px;
         justify-content: flex-start;
     }
 
@@ -535,8 +600,7 @@ ul p {
     .nav-search {
         flex: 1 1 100%;
         order: 10;
-        width: 100% !important;
-        min-width: 100%;
+        width: 100%;
         height: 36px;
         margin: 3px 0;
     }
@@ -557,13 +621,11 @@ ul p {
 
     .language-selector {
         padding: 4px 6px;
-        gap: 3px;
-        flex-shrink: 0;
     }
 
     .language-selector .flag-icon {
         width: 16px;
-        height: 11px;
+        height: 12px;
     }
 
     .language-selector .lang-text {
@@ -574,12 +636,14 @@ ul p {
         font-size: 8px;
     }
 
-    .nav-signin, .nav-return {
+    .nav-signin,
+    .nav-return {
         font-size: 10px;
-        padding: 2px 4px;
+        padding: 3px 4px;
     }
 
-    .nav-signin span, .nav-return span {
+    .nav-signin span,
+    .nav-return span {
         font-size: 8px;
     }
 
@@ -589,14 +653,14 @@ ul p {
 
     .nav-cart {
         font-size: 12px;
-        padding: 2px 5px;
+        padding: 3px 5px;
     }
 
     .nav-cart i {
         font-size: 22px;
     }
 
-    /* Panel */
+    /* ---- PANEL ---- */
     .panel {
         height: auto;
         min-height: 32px;
@@ -608,7 +672,7 @@ ul p {
 
     .panel-all {
         font-size: 11px;
-        padding: 2px 4px;
+        padding: 2px 5px;
     }
 
     .panel-ops {
@@ -622,7 +686,7 @@ ul p {
     .panel-ops p {
         font-size: 10px;
         margin-left: 0;
-        padding: 2px 4px;
+        padding: 2px 5px;
     }
 
     .panel-deals {
@@ -630,69 +694,56 @@ ul p {
         padding: 2px 5px;
     }
 
-    /* Hero */
+    /* ---- HERO ---- */
     .hero-section {
         height: 200px;
-        padding: 0 10px;
+        padding: 0 10px 15px;
     }
 
     .hero-msg {
         font-size: 11px;
         height: auto;
-        min-height: 32px;
+        min-height: 34px;
         width: 95%;
         padding: 8px 12px;
-        margin-bottom: 15px;
     }
 
-    /* Shop */
+    /* ---- SHOP ---- */
     .shop-section {
-        padding: 8px;
-        gap: 10px;
+        padding: 10px;
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .box {
-        width: 100% !important;
-        height: auto;
-        min-height: auto;
-        padding: 12px;
-        margin-top: 8px;
-    }
-
-    .box-content h2 {
-        font-size: 16px;
+        width: 100%;
+        min-width: unset;
+        padding: 15px;
+        margin: 0;
     }
 
     .box-image {
-        height: 180px;
+        height: 200px;
+    }
+
+    .box-content h2 {
+        font-size: 17px;
     }
 
     .box-content p {
-        font-size: 12px;
+        font-size: 13px;
     }
 
-    /* Home Arrivals */
     .home-arrivals-card {
-        width: 100% !important;
-        height: auto;
-        min-height: auto;
-        padding: 12px;
-        margin-top: 8px;
+        width: 100%;
+        min-width: unset;
+        padding: 15px;
+        margin: 0;
     }
 
     .card-title {
-        font-size: 16px;
-    }
-
-    .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-    }
-
-    .grid-item {
-        width: 100%;
-        margin-bottom: 0;
+        font-size: 17px;
     }
 
     .grid-image {
@@ -704,26 +755,29 @@ ul p {
     }
 
     .shop-link {
-        font-size: 12px;
+        font-size: 13px;
     }
 
-    /* Footer */
+    /* ---- FOOTER ---- */
     .foot-panel2 {
-        flex-wrap: wrap;
-        padding: 15px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
         gap: 15px;
-        justify-content: center;
     }
 
     .foot-panel2 ul {
-        width: 45%;
-        margin-top: 10px;
+        width: 100%;
+        text-align: center;
     }
 
     .foot-panel2 ul p {
-        font-size: 12px;
-        text-align: center;
-        margin-left: 0;
+        font-size: 13px;
+        margin-bottom: 8px;
+    }
+
+    .foot-panel2 ul p b {
+        font-size: 15px;
     }
 
     .footer-bottom-content {
@@ -736,13 +790,12 @@ ul p {
     }
 
     .footer-selector {
-        padding: 6px 10px;
+        padding: 8px 12px;
         font-size: 12px;
     }
 
     .also-see-section {
         flex-direction: column;
-        padding: 20px 15px;
         gap: 12px;
     }
 
@@ -750,7 +803,7 @@ ul p {
         width: 100%;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 10px;
     }
 
     .also-see-item {
@@ -779,13 +832,15 @@ ul p {
     }
 }
 
-/* ---------- SMALL MOBILE (max-width: 480px) ---------- */
-@media(max-width: 480px) {
-    /* Navbar */
+/* ==========================================
+   RESPONSIVE - SMALL MOBILE (max-width: 480px)
+   ========================================== */
+
+@media (max-width: 480px) {
     .navbar {
         min-height: 45px;
         padding: 4px 5px;
-        gap: 4px;
+        gap: 3px;
     }
 
     .nav-logo {
@@ -800,13 +855,11 @@ ul p {
 
     .nav-search {
         height: 30px;
-        margin: 2px 0;
     }
 
     .search-select {
         width: 35px;
         font-size: 8px;
-        padding: 0 2px;
     }
 
     .search-input {
@@ -815,8 +868,8 @@ ul p {
     }
 
     .search-icon {
-        width: 30px;
-        font-size: 11px;
+        width: 32px;
+        font-size: 12px;
     }
 
     .language-selector {
@@ -825,7 +878,7 @@ ul p {
 
     .language-selector .flag-icon {
         width: 14px;
-        height: 9px;
+        height: 10px;
     }
 
     .language-selector .lang-text {
@@ -836,12 +889,14 @@ ul p {
         font-size: 7px;
     }
 
-    .nav-signin, .nav-return {
+    .nav-signin,
+    .nav-return {
         font-size: 8px;
-        padding: 1px 3px;
+        padding: 2px 3px;
     }
 
-    .nav-signin span, .nav-return span {
+    .nav-signin span,
+    .nav-return span {
         font-size: 7px;
     }
 
@@ -851,28 +906,27 @@ ul p {
 
     .nav-cart {
         font-size: 10px;
-        padding: 1px 3px;
+        padding: 2px 3px;
     }
 
     .nav-cart i {
         font-size: 18px;
     }
 
-    /* Panel */
     .panel {
-        min-height: 26px;
+        min-height: 28px;
         padding: 3px 5px;
         gap: 3px;
     }
 
     .panel-all {
         font-size: 9px;
-        padding: 1px 3px;
+        padding: 1px 4px;
     }
 
     .panel-ops p {
         font-size: 8px;
-        padding: 1px 3px;
+        padding: 1px 4px;
     }
 
     .panel-deals {
@@ -880,56 +934,50 @@ ul p {
         padding: 1px 4px;
     }
 
-    /* Hero */
     .hero-section {
         height: 150px;
+        padding: 0 5px 10px;
     }
 
     .hero-msg {
         font-size: 9px;
         min-height: 28px;
         padding: 5px 8px;
-        margin-bottom: 10px;
         width: 98%;
     }
 
-    /* Shop */
     .shop-section {
-        padding: 5px;
-        gap: 6px;
+        padding: 6px;
+        gap: 8px;
     }
 
     .box {
-        padding: 8px;
-        margin-top: 5px;
+        padding: 10px;
     }
 
     .box-content h2 {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .box-image {
-        height: 140px;
+        height: 160px;
     }
 
     .box-content p {
-        font-size: 11px;
+        font-size: 12px;
     }
 
-    /* Home Arrivals */
     .home-arrivals-card {
-        padding: 8px;
-        margin-top: 5px;
+        padding: 10px;
     }
 
     .card-title {
-        font-size: 14px;
-        margin-bottom: 6px;
+        font-size: 15px;
     }
 
     .grid-container {
         grid-template-columns: 1fr;
-        gap: 6px;
+        gap: 8px;
     }
 
     .grid-image {
@@ -941,24 +989,21 @@ ul p {
     }
 
     .shop-link {
-        font-size: 11px;
-        margin-top: 8px;
-    }
-
-    /* Footer */
-    .foot-panel2 ul {
-        width: 100%;
-        text-align: center;
+        font-size: 12px;
     }
 
     .foot-panel2 ul p {
-        font-size: 11px;
+        font-size: 12px;
+    }
+
+    .foot-panel2 ul p b {
+        font-size: 14px;
     }
 
     .footer-selector {
         width: 100%;
         justify-content: center;
-        padding: 6px;
+        padding: 6px 10px;
         font-size: 11px;
     }
 
