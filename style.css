@@ -1,281 +1,4 @@
-*{
-    margin: 0;
-    font-family: Arial;
-    box-sizing: border-box;   /* FIX: pehle "border: border-box" tha, jo invalid tha.
-                                  box-sizing: border-box padding/border ko width ke
-                                  andar hi count karta hai, overflow rokta hai */
-}
-
-.navbar{
-    height: 60px;
-    background-color: #0f1111;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;   /* mobile pe items neeche wrap ho jayenge, overflow nahi hoga */
-}
-
-.nav-logo{
-    height: 50px;
-    width: 100px;
-}
-
-.logo{
-    background-image: url(amazon_logo.png);
-   background-size: cover;
-   height: 50px;
-   width: 100%;
-}
-
-.border{
-    border: 1.5px solid transparent;
-
-}
-
-.border:hover{
-    border: 1.5px solid white;
-}
-
-/* box 2 */
-
-.add-first{
-    color: #cccccc;
-    font-size: 0.85rem;
-    margin-left: 15px;
-}
-
-.add-second{
-   
-    font-size: 1rem;
-    margin-left: 3px;
-}
-
-.add-icon{
-   display: flex;
-   align-items: center;
-}
- 
-/* box3 */
-
-.nav-search{
-    display: flex;
-   justify-content: space-evenly;
-   background-color: pink;
-   width: 620px;
-   max-width: 100%;   /* FIX: chhoti screen pe 620px se bade nahi hoga, container ke andar rahega */
-   height: 40px;
-   border-radius: 4px;
-}
-
-.search-select{
-    background-color: #f3f3f3;
-    width: 50px;
-    text-align: center;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
-}
-
-.search-input{
-    width: 100%;
-    font-size: 1rem;
-    border: none;
-}
-
-.search-icon{
-    width: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.2rem;
-    background-color: #febd68;
-     border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    color: #0f1111;
-}
-.nav-logo{
-    width:80px;
-}
-
-.nav-cart{
-    margin-left:auto;
-}
-
-.nav-sign,
-.nav-return{
-    display:none;
-}
-
-.nav-search:hover{
-    border: 2px solid orange;
-}
-
-/* flag ka lia */
-
-.language-selector {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background-color: #131921; /* Amazon dark header color */
-  color: #ffffff;
-  padding: 8px 10px;
-  cursor: pointer;
-  font-family: Arial, sans-serif;
-  border: 1px solid transparent;
-}
-
-.language-selector:hover {
-  border: 1px solid #ffffff;
-}
-
-.flag-icon {
-  width: 20px;
-  height: auto;
-  display: block;
-}
-
-.lang-text {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.dropdown-arrow {
-  font-size: 10px;
-  color: #cccccc;
-  margin-left: 2px;
-}
-
-
-/* box 4 */
-
-span{
-    font-size: 0.7rem;
-  
-}
-
-.nav-second{
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-/* box 6 */
-
-.nav-cart i{
-    font-size: 30px;
-}
-
-.nav-cart{
-    font-size: 0.75rem;
-    font-weight: 700;
-}
-
-/* panel */
-
-.panel{
-    height: 40px;
-    background-color: #222f3d;
-    display: flex;
-    color: white;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-.panel-ops p{
-    display: inline;
-    margin-left: 15px;
-}
-
-.panel-ops{
-    width: 70%;
-    font-size: 0.85rem;
-}
-
-.panel-deals{
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-/* hero-section */
-
-.hero-section{
-    background-image: url(hero_image.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
 @media(max-width:768px){
-
-.hero-section{
-    min-height:180px;
-}
-
-}
-.hero-msg{
-    background-color: white;
-    color: black;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.85rem;
-    width: 80%;
-    margin-bottom: 25px;
-    text-align: center;
-    padding: 0 10px;
-}
-
-.hero-msg a{
-    color:#007185;
-}
-
-/* shop section */
-
-@media(max-width:992px){
-
-.shop-section{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-}
-
-@media(max-width:576px){
-
-.shop-section{
-
-grid-template-columns:1fr;
-
-}
-
-}
-img{
-
-display:block;
-
-max-width:100%;
-
-height:auto;
-
-}
-html{
-
-overflow-x:hidden;
-
-}
-
-body{
-
-overflow-x:hidden;
-
-width:100%;
-
-}@media(max-width:768px){
 
 .foot-panel2{
 
@@ -294,364 +17,1168 @@ grid-template-columns:1fr;
 }
 
 }
+/*=========================================
+ HERO SECTION
+=========================================*/
+
+.hero-section{
+
+    width:100%;
+
+    min-height:350px;
+
+    background-image:url("hero_image.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    padding:20px;
+
+}
+
+.hero-msg{
+
+    width:90%;
+
+    max-width:1400px;
+
+    background:#ffffff;
+
+    color:#111;
+
+    padding:12px 20px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    font-size:14px;
+
+    margin-bottom:25px;
+
+    border-radius:4px;
+
+    box-shadow:0 2px 8px rgba(0,0,0,.15);
+
+}
+
+.hero-msg a{
+
+    color:#007185;
+
+    font-weight:600;
+
+}
+
+.hero-msg a:hover{
+
+    color:#C7511F;
+
+}
+
+/*=========================================
+ SHOP SECTION
+=========================================*/
+
+.shop-section{
+
+    width:100%;
+
+    max-width:1500px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+/*=========================================
+ PRODUCT CARD
+=========================================*/
+
+.box{
+
+    background:#fff;
+
+    border-radius:6px;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:420px;
+
+    transition:.3s;
+
+}
+
+.box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
+}
+
+.box-content h2{
+
+    font-size:21px;
+
+    color:#111;
+
+    margin-bottom:15px;
+
+    line-height:1.3;
+
+}
+
 .box-image{
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-     margin-top:1rem;
-    margin-bottom: 1rem;
-   
+
+    width:100%;
+
+    height:300px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-radius:4px;
+
+    margin-bottom:18px;
+
 }
 
-.box-content{
-    margin-left: 1rem;
-    margin-right: 1rem;
+.box-content p{
+
+    color:#007185;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
 }
 
-.box-content p {
-  color:#007185;
+.box-content p:hover{
+
+    color:#C7511F;
+
 }
 
+/*=========================================
+ HOME ARRIVAL CARD
+=========================================*/
 
-.home-arrivals-card {
-    background-color: #ffffff;
-    width: 300px;
-    height: 400px;
-    padding: 20px;
-    margin-top: 15px;
-    box-sizing: border-box;
+.home-arrivals-card{
+
+    background:#fff;
+
+    border-radius:6px;
+
+    padding:20px;
+
+    min-height:420px;
+
+    transition:.3s;
+
 }
 
-.card-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0F1111;
-    margin-bottom: 12px;
-    line-height: 1.2;
+.home-arrivals-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+
 }
 
+.card-title{
 
-.grid-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 12px;
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:18px;
+
+    color:#111;
+
 }
 
-.grid-item {
-    width: 48%;
-    margin-bottom: 12px;
+.grid-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
 }
 
-.grid-image {
-    height: 100px;
-    background-color: #F0EEE9;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    margin-bottom: 6px;
+.grid-item{
+
+    width:100%;
+
 }
 
-.grid-label {
-    font-size: 14px;
-    color: #0F1111;
-    margin: 0;
-    line-height: 1.3;
+.grid-image{
+
+    width:100%;
+
+    height:120px;
+
+    background-size:cover;
+
+    background-position:center;
+
+    border-radius:4px;
+
 }
 
-.shop-link {
-    color: #007185;
-    font-size: 14px;
-    cursor: pointer;
+.grid-label{
+
+    margin-top:8px;
+
+    font-size:13px;
+
+    color:#111;
+
 }
 
-/* footer */
+.shop-link{
+
+    margin-top:18px;
+
+    display:inline-block;
+
+    color:#007185;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+.shop-link:hover{
+
+    color:#C7511F;
+
+}
+
+/*=========================================
+ LARGE TABLET
+=========================================*/
+
+@media(max-width:1200px){
+
+.shop-section{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+/*=========================================
+ TABLET
+=========================================*/
+
+@media(max-width:992px){
+
+.shop-section{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero-section{
+
+min-height:280px;
+
+}
+
+.hero-msg{
+
+font-size:13px;
+
+width:95%;
+
+}
+
+.box{
+
+min-height:390px;
+
+}
+
+.box-image{
+
+height:240px;
+
+}
+
+}
+
+/*=========================================
+ MOBILE
+=========================================*/
+
+@media(max-width:768px){
+
+.shop-section{
+
+grid-template-columns:1fr;
+
+padding:15px;
+
+gap:15px;
+
+}
+
+.hero-section{
+
+min-height:220px;
+
+padding:10px;
+
+}
+
+.hero-msg{
+
+margin-bottom:10px;
+
+padding:10px;
+
+font-size:12px;
+
+}
+
+.box{
+
+padding:15px;
+
+min-height:auto;
+
+}
+
+.box-image{
+
+height:220px;
+
+}
+
+.home-arrivals-card{
+
+padding:15px;
+
+}
+
+.card-title{
+
+font-size:20px;
+
+}
+
+}
+
+/*=========================================
+ SMALL MOBILE
+=========================================*/
+
+@media(max-width:480px){
+
+.hero-section{
+
+min-height:180px;
+
+}
+
+.hero-msg{
+
+font-size:11px;
+
+}
+
+.grid-container{
+
+grid-template-columns:1fr;
+
+}
+
+.grid-image{
+
+height:180px;
+
+}
+
+.box-content h2{
+
+font-size:18px;
+
+}
+
+}
+/*=========================================
+ FOOTER
+=========================================*/
 
 footer{
-    margin-top: 15px;
+
+width:100%;
+
+margin-top:30px;
+
+background:#131A22;
+
 }
+
+/*==========================
+ Back To Top
+==========================*/
 
 .foot-panel1{
-    background-color: #37475a;
-    color: white;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.85rem;
+
+height:50px;
+
+background:#37475A;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:#fff;
+
+font-size:14px;
+
+cursor:pointer;
+
+transition:.3s;
+
 }
 
+.foot-panel1:hover{
+
+background:#485769;
+
+}
+
+/*==========================
+ Main Footer
+==========================*/
 
 .foot-panel2{
-    background-color: #222f3d;
-    color: white;
-    display: flex;
-    flex-wrap: wrap;   /* FIX: fixed height 300px hata di, wrap add kiya taake mobile pe columns neeche stack ho sakein */
-    justify-content: space-evenly;
-    padding: 20px 0;
-}
 
-ul {
-    margin-top: 25px ;
-}
+background:#232F3E;
 
-ul p{
-    display: block;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    color: #dddddd;
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:40px;
+
+padding:50px 80px;
 
 }
 
+.foot-panel2 ul{
 
-.footer-bottom-bar {
-    background-color: #232F3E;
-    border-top: 1px solid #3a4553;
-    padding: 30px 20px;
-    box-sizing: border-box;
+margin:0;
+
+padding:0;
+
 }
 
-.footer-bottom-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+.foot-panel2 ul h3{
+
+color:#fff;
+
+font-size:16px;
+
+margin-bottom:18px;
+
+}
+
+.foot-panel2 ul li{
+
+list-style:none;
+
+margin-bottom:10px;
+
+}
+
+.foot-panel2 ul li a{
+
+color:#DDD;
+
+font-size:14px;
+
+transition:.3s;
+
+}
+
+.foot-panel2 ul li a:hover{
+
+text-decoration:underline;
+
+color:#fff;
+
+}
+
+/*==========================
+ Logo Section
+==========================*/
+
+.footer-bottom-bar{
+
+background:#232F3E;
+
+border-top:1px solid #3a4553;
+
+padding:30px 20px;
+
+}
+
+.footer-bottom-content{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
 }
 
 .footer-logo{
-    height: 50px;
-    width: 100px;
+
+width:110px;
+
+height:45px;
+
 }
 
 .logo-image{
-    background-image: url(amazon_logo.png);
-   background-size: cover;
-   height: 50px;
-   width: 100%;
+
+width:100%;
+
+height:100%;
+
+background:url("amazon_logo.png");
+
+background-size:contain;
+
+background-repeat:no-repeat;
+
+background-position:center;
+
 }
 
-.selector-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
+/*==========================
+ Footer Buttons
+==========================*/
+
+.selector-group{
+
+display:flex;
+
+gap:15px;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
 }
 
-.footer-selector {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background-color: transparent;
-    border: 1px solid #848d99;
-    border-radius: 3px;
-    padding: 10px 15px;
-    color: #ffffff;
-    font-size: 14px;
-    cursor: pointer;
+.footer-selector{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
+padding:10px 18px;
+
+border:1px solid #848D99;
+
+border-radius:4px;
+
+color:#fff;
+
+cursor:pointer;
+
+font-size:14px;
+
+transition:.3s;
+
 }
 
-.footer-selector:hover {
-    border-color: #ffffff;
+.footer-selector:hover{
+
+border-color:#fff;
+
 }
 
-.icon {
-    font-size: 16px;
+/*==========================
+ Services
+==========================*/
+
+.footer-bottom-wrapper{
+
+background:#131A22;
+
+padding:40px 30px;
+
 }
 
-.select-arrows {
-    font-size: 8px;
-    color: #848d99;
-    line-height: 1;
-    margin-left: 5px;
+.also-see-section{
+
+display:grid;
+
+grid-template-columns:repeat(7,1fr);
+
+gap:25px;
+
 }
 
-.currency-code {
-    font-weight: bold;
+.also-see-item h5{
+
+color:#fff;
+
+font-size:13px;
+
+margin-bottom:6px;
+
+font-weight:bold;
+
 }
 
-.flag-icon {
-    width: 20px;
-    height: auto;
+.also-see-item p{
+
+color:#999;
+
+font-size:12px;
+
+line-height:18px;
+
 }
 
-.selector-text {
-    white-space: nowrap;
+/*==========================
+ Legal
+==========================*/
+
+.footer-legal-section{
+
+padding:25px 20px;
+
+text-align:center;
+
 }
 
-.footer-bottom-wrapper {
-    background-color: #0F1621;
+.legal-links{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
+margin-bottom:15px;
+
 }
 
-/* Also See Grid */
-.also-see-section {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 35px 30px 25px;
-    box-sizing: border-box;
+.legal-links li{
+
+list-style:none;
+
 }
 
-.also-see-column {
-    width: 13.5%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.legal-links li a{
+
+color:#DDD;
+
+font-size:13px;
+
+transition:.3s;
+
 }
 
-.also-see-item h5 {
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: bold;
-    margin: 0 0 4px 0;
+.legal-links li a:hover{
+
+color:#fff;
+
+text-decoration:underline;
+
 }
 
-.also-see-item p {
-    color: #999999;
-    font-size: 13px;
-    font-weight: normal;
-    line-height: 1.4;
-    margin: 0;
+.copyright-text{
+
+font-size:12px;
+
+color:#999;
+
 }
 
-/* Legal Links */
-.footer-legal-section {
-    text-align: center;
-    padding: 15px 20px 25px;
-    box-sizing: border-box;
+/*=================================
+ Large Tablet
+=================================*/
+
+@media(max-width:1200px){
+
+.foot-panel2{
+
+grid-template-columns:repeat(2,1fr);
+
+padding:40px;
+
 }
 
-.legal-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin: 0 0 10px 0;
-    padding: 0;
+.also-see-section{
+
+grid-template-columns:repeat(4,1fr);
+
 }
 
-.legal-links li a {
-    color: #cccccc;
-    font-size: 13px;
-    font-weight: normal;
-    text-decoration: none;
 }
 
-.legal-links li a:hover {
-    text-decoration: underline;
-    color: #ffffff;
+/*=================================
+ Tablet
+=================================*/
+
+@media(max-width:768px){
+
+.foot-panel2{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+gap:30px;
+
 }
 
-.ads-privacy {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+.footer-bottom-content{
+
+flex-direction:column;
+
 }
 
-.privacy-icon {
-    display: flex;
-    align-items: center;
+.selector-group{
+
+justify-content:center;
+
 }
 
-.copyright-text {
-    color: #999999;
-    font-size: 12px;
-    margin: 0;
+.also-see-section{
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
-/* ============================================
-   RESPONSIVE MEDIA QUERIES
-   Yahan se neeche sab NAYA hai - mobile/tablet
-   ke liye layout adjustments
-   ============================================ */
+.legal-links{
 
-/* Tablet aur chhoti screens (768px aur neeche) */
-@media (max-width: 768px) {
+gap:12px;
 
-    .navbar{
-        height: auto;
-        padding: 10px;
-        justify-content: center;
-        gap: 8px;
-    }
-
-    .nav-address, .language-selector{
-        display: none;   /* mobile pe kam zaroori items chhupa do, jagah bachao */
-    }
-
-    .nav-search{
-        order: 3;         /* search bar ko neeche wali line pe le aao */
-        width: 100%;
-        margin-top: 8px;
-    }
-
-    .panel-ops{
-        width: 100%;
-        text-align: center;
-        font-size: 0.75rem;
-    }
-
-    .panel-ops p{
-        margin: 0 8px;
-    }
-
-    .panel-deals{
-        display: none;   /* chhoti screen pe extra text hide karo */
-    }
-
-    .box{
-        width: 45%;      /* 4 columns ki jagah 2 columns per row */
-        height: auto;
-        min-height: 320px;
-    }
-
-    .box-image{
-        height: 200px;
-    }
-
-    .home-arrivals-card{
-        width: 100%;
-    }
-
-    .foot-panel2{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .also-see-column{
-        width: 45%;      /* 7 columns ki jagah 2 columns per row */
-    }
-
-    .footer-bottom-content{
-        flex-direction: column;
-    }
 }
 
-/* Mobile phones (480px aur neeche) */
-@media (max-width: 480px) {
-
-    .box{
-        width: 100%;     /* ek hi column, full width */
-    }
-
-    .also-see-column{
-        width: 100%;     /* footer bhi single column */
-    }
-
-    .hero-msg{
-        font-size: 0.75rem;
-        width: 95%;
-    }
-
-    .legal-links{
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .grid-item{
-        width: 100%;
-    }
 }
+
+/*=================================
+ Mobile
+=================================*/
+
+@media(max-width:480px){
+
+.foot-panel2{
+
+padding:30px 20px;
+
+}
+
+.footer-selector{
+
+width:100%;
+
+justify-content:center;
+
+}
+
+.also-see-section{
+
+grid-template-columns:1fr;
+
+gap:20px;
+
+text-align:center;
+
+}
+
+.legal-links{
+
+flex-direction:column;
+
+gap:10px;
+
+}
+
+.footer-logo{
+
+width:90px;
+
+}
+
+}/*==================================================
+        FINAL RESPONSIVE FIXES
+===================================================*/
+
+/* Smooth Animation */
+
+*{
+    transition: all .25s ease;
+}
+
+/* Better Buttons */
+
+button{
+    cursor:pointer;
+    border:none;
+    outline:none;
+}
+
+/* Better Inputs */
+
+input,
+select{
+    outline:none;
+}
+
+/* Remove Horizontal Scroll */
+
+html,
+body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+/* Images */
+
+img{
+    display:block;
+    max-width:100%;
+    height:auto;
+}
+
+/* Links */
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+/* Product Hover */
+
+.box,
+.home-arrivals-card{
+
+    transition:.3s;
+
+}
+
+.box:hover,
+.home-arrivals-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+}
+
+/* Search Animation */
+
+.nav-search{
+
+transition:.3s;
+
+}
+
+.nav-search:hover{
+
+box-shadow:0 0 0 3px orange;
+
+}
+
+/* Footer Hover */
+
+.footer-selector:hover{
+
+background:#37475A;
+
+}
+
+/* Panel Hover */
+
+.panel p:hover{
+
+cursor:pointer;
+
+text-decoration:underline;
+
+}
+
+/* Logo Hover */
+
+.logo,
+.logo-image{
+
+transition:.3s;
+
+}
+
+.logo:hover,
+.logo-image:hover{
+
+transform:scale(1.04);
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+height:8px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#999;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#ddd;
+
+}
+
+/* Selection */
+
+::selection{
+
+background:#febd69;
+
+color:#111;
+
+}
+
+/*========================================
+    EXTRA LARGE SCREEN
+========================================*/
+
+@media(min-width:1600px){
+
+.shop-section{
+
+max-width:1600px;
+
+grid-template-columns:repeat(5,1fr);
+
+}
+
+.hero-section{
+
+min-height:420px;
+
+}
+
+}
+
+/*========================================
+     LAPTOP
+========================================*/
+
+@media(max-width:1200px){
+
+.navbar{
+
+padding:10px;
+
+}
+
+.hero-section{
+
+min-height:280px;
+
+}
+
+}
+
+/*========================================
+      TABLET
+========================================*/
+
+@media(max-width:992px){
+
+.shop-section{
+
+padding:15px;
+
+}
+
+.footer-bottom-content{
+
+text-align:center;
+
+}
+
+}
+
+/*========================================
+      MOBILE
+========================================*/
+
+@media(max-width:768px){
+
+body{
+
+font-size:14px;
+
+}
+
+.shop-section{
+
+gap:15px;
+
+}
+
+.box{
+
+padding:15px;
+
+}
+
+.hero-msg{
+
+line-height:1.5;
+
+}
+
+.footer-selector{
+
+font-size:13px;
+
+}
+
+}
+
+/*========================================
+      SMALL MOBILE
+========================================*/
+
+@media(max-width:480px){
+
+.nav-search{
+
+height:38px;
+
+}
+
+.search-icon{
+
+font-size:18px;
+
+}
+
+.box-image{
+
+height:200px;
+
+}
+
+.grid-image{
+
+height:170px;
+
+}
+
+.hero-msg{
+
+font-size:11px;
+
+padding:8px;
+
+}
+
+.footer-selector{
+
+padding:10px;
+
+}
+
+}
+
+/*========================================
+        PERFORMANCE
+========================================*/
+
+.hero-section,
+.box-image,
+.grid-image{
+
+background-repeat:no-repeat;
+
+background-position:center;
+
+background-size:cover;
+
+}
+
+/*========================================
+        AMAZON EFFECT
+========================================*/
+
+.box:hover .box-content p{
+
+color:#C7511F;
+
+}
+
+.home-arrivals-card:hover .shop-link{
+
+color:#C7511F;
+
+}
+
