@@ -1,8 +1,9 @@
 *{
     margin: 0;
     font-family: Arial;
-    border: border-box;   /* ju height width set ho gie usi ma sa text size increase decrease ho ga   */
-   
+    box-sizing: border-box;   /* FIX: pehle "border: border-box" tha, jo invalid tha.
+                                  box-sizing: border-box padding/border ko width ke
+                                  andar hi count karta hai, overflow rokta hai */
 }
 
 .navbar{
@@ -12,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-
+    flex-wrap: wrap;   /* mobile pe items neeche wrap ho jayenge, overflow nahi hoga */
 }
 
 .nav-logo{
@@ -62,6 +63,7 @@
    justify-content: space-evenly;
    background-color: pink;
    width: 620px;
+   max-width: 100%;   /* FIX: chhoti screen pe 620px se bade nahi hoga, container ke andar rahega */
    height: 40px;
    border-radius: 4px;
 }
@@ -165,6 +167,7 @@ span{
     color: white;
     align-items: center;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 .panel-ops p{
@@ -187,6 +190,7 @@ span{
 .hero-section{
     background-image: url(hero_image.jpg);
     background-size: cover;
+    background-position: center;
     height: 300px;
     display: flex;
     justify-content: center;
@@ -203,7 +207,8 @@ span{
     font-size: 0.85rem;
     width: 80%;
     margin-bottom: 25px;
-
+    text-align: center;
+    padding: 0 10px;
 }
 
 .hero-msg a{
@@ -234,6 +239,7 @@ span{
 .box-image{
     height: 300px;
     background-size: cover;
+    background-position: center;
      margin-top:1rem;
     margin-bottom: 1rem;
    
@@ -321,10 +327,10 @@ footer{
 .foot-panel2{
     background-color: #222f3d;
     color: white;
-    height: 300px;
     display: flex;
+    flex-wrap: wrap;   /* FIX: fixed height 300px hata di, wrap add kiya taake mobile pe columns neeche stack ho sakein */
     justify-content: space-evenly;
-    
+    padding: 20px 0;
 }
 
 ul {
@@ -371,6 +377,7 @@ ul p{
 .selector-group {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .footer-selector {
@@ -413,30 +420,6 @@ ul p{
 .selector-text {
     white-space: nowrap;
 }
-
-
-
-
-
-
-
-
-/* .foot-panel4{
-    background-color:  hsl(221, 24%, 28%);
-    color: white;
-    height: 80px;
-    font-size: 0.7rem;
-    text-align: center;
-}
-
-.pages{
-    padding-top: 25px;
-}
-
-.copyright{
-    padding-top: 5px;
-   
-} */
 
 .footer-bottom-wrapper {
     background-color: #0F1621;
@@ -518,4 +501,99 @@ ul p{
     color: #999999;
     font-size: 12px;
     margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE MEDIA QUERIES
+   Yahan se neeche sab NAYA hai - mobile/tablet
+   ke liye layout adjustments
+   ============================================ */
+
+/* Tablet aur chhoti screens (768px aur neeche) */
+@media (max-width: 768px) {
+
+    .navbar{
+        height: auto;
+        padding: 10px;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-address, .language-selector{
+        display: none;   /* mobile pe kam zaroori items chhupa do, jagah bachao */
+    }
+
+    .nav-search{
+        order: 3;         /* search bar ko neeche wali line pe le aao */
+        width: 100%;
+        margin-top: 8px;
+    }
+
+    .panel-ops{
+        width: 100%;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    .panel-ops p{
+        margin: 0 8px;
+    }
+
+    .panel-deals{
+        display: none;   /* chhoti screen pe extra text hide karo */
+    }
+
+    .box{
+        width: 45%;      /* 4 columns ki jagah 2 columns per row */
+        height: auto;
+        min-height: 320px;
+    }
+
+    .box-image{
+        height: 200px;
+    }
+
+    .home-arrivals-card{
+        width: 100%;
+    }
+
+    .foot-panel2{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .also-see-column{
+        width: 45%;      /* 7 columns ki jagah 2 columns per row */
+    }
+
+    .footer-bottom-content{
+        flex-direction: column;
+    }
+}
+
+/* Mobile phones (480px aur neeche) */
+@media (max-width: 480px) {
+
+    .box{
+        width: 100%;     /* ek hi column, full width */
+    }
+
+    .also-see-column{
+        width: 100%;     /* footer bhi single column */
+    }
+
+    .hero-msg{
+        font-size: 0.75rem;
+        width: 95%;
+    }
+
+    .legal-links{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .grid-item{
+        width: 100%;
+    }
 }
