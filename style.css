@@ -1193,3 +1193,210 @@ footer {
         height: 110px !important;
     }
 }
+/* ==========================================================================
+   FINAL FIXED: AMAZON EXACT CLEAN MOBILE UI LAYOUT (ADD AT THE BOTTOM)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. NAVBAR - Clean Rows Structure */
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: auto !important;
+        padding: 6px 12px !important;
+        background-color: #131921 !important;
+        row-gap: 6px !important;
+    }
+
+    /* Row 1 Left: Perfect Logo sizing */
+    .nav-logo {
+        order: 1 !important;
+        height: 25px !important;
+        width: 65px !important;
+        margin-right: auto !important;
+    }
+
+    .logo {
+        height: 100% !important;
+        width: 100% !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+    }
+
+    /* Row 1 Right: Align Accounts & Cart horizontally */
+    .nav-signin {
+        order: 2 !important;
+        padding: 4px 6px !important;
+        white-space: nowrap !important;
+    }
+
+    .nav-signin span {
+        display: none !important; /* Mobile pe "Hello" hide hota hai, clean look ke liye */
+    }
+
+    .nav-second {
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        color: #fff !important;
+    }
+
+    .nav-return, .language-selector {
+        display: none !important; /* Mobile layout se extra clutter remove */
+    }
+
+    .nav-cart {
+        order: 3 !important;
+        padding: 4px 6px !important;
+        font-size: 13px !important;
+    }
+
+    .nav-cart i {
+        font-size: 22px !important;
+    }
+
+    /* Row 2: Full-Width Independent Search Bar */
+    .nav-search {
+        order: 4 !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        height: 38px !important;
+        margin: 2px 0 !important;
+        border-radius: 4px !important;
+    }
+
+    .search-select {
+        display: none !important; /* Mobile screen space bachane ke liye category dropdown hide */
+    }
+
+    .search-input {
+        font-size: 14px !important;
+        padding: 0 10px !important;
+    }
+
+    .search-icon {
+        width: 42px !important;
+        font-size: 16px !important;
+    }
+
+    /* 2. DELIVERY ADDRESS - Separate full-width location panel */
+    .nav-address {
+        order: 5 !important;
+        display: flex !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        background: #1f2937 !important; /* Target standard light gray/dark tone overlay */
+        margin: 4px -12px -6px -12px !important; /* Screen edge-to-edge flush layout */
+        padding: 8px 12px !important;
+        align-items: center !important;
+    }
+
+    .add-icon {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+    }
+
+    .add-first {
+        font-size: 12px !important;
+        color: #ccc !important;
+        margin-left: 0 !important;
+    }
+
+    .add-second {
+        font-size: 12px !important;
+        color: #fff !important;
+        font-weight: 500 !important;
+        margin-left: 0 !important;
+    }
+
+    /* 3. CATEGORY PANEL - Clean horizontal slide (No Text Overlapping!) */
+    .panel {
+        height: 38px !important;
+        display: flex !important;
+        flex-wrap: nowrap !important; /* Row wrapping disabled to protect content layout */
+        overflow-x: auto !important; /* Enables smooth swiping on mobile */
+        justify-content: flex-start !important;
+        gap: 16px !important;
+        padding: 0 12px !important;
+        background: #232f3e !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .panel::-webkit-scrollbar {
+        display: none !important; /* Hides horizontal scrollbar bar track for native look */
+    }
+
+    .panel-all {
+        font-size: 13px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .panel-ops {
+        width: auto !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 16px !important;
+    }
+
+    .panel-ops p {
+        font-size: 13px !important;
+        margin-left: 0 !important;
+        white-space: nowrap !important; /* Text block wrapping fix */
+        display: inline-block !important;
+    }
+
+    .panel-deals {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* 4. MAIN HERO SECTION BACKGROUND FIXED */
+    .hero-section {
+        height: 180px !important;
+        padding: 0 10px 10px !important;
+    }
+
+    .hero-msg {
+        font-size: 11px !important;
+        width: 100% !important;
+        padding: 6px !important;
+        height: auto !important;
+    }
+
+    /* 5. SHOP CARDS SECTION - Stacking properly vertically */
+    .shop-section {
+        flex-direction: column !important;
+        padding: 10px !important;
+        gap: 10px !important;
+    }
+
+    .box, .home-arrivals-card {
+        width: 100% !important;
+        min-width: 100% !important;
+        margin: 0 !important;
+        padding: 14px !important;
+        border-radius: 4px !important;
+    }
+
+    .box-content h2, .card-title {
+        font-size: 18px !important;
+    }
+
+    .box-image {
+        height: 200px !important;
+    }
+
+    /* Inside Grid Items Layout (Like Image 3) */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .grid-image {
+        height: 100px !important;
+    }
+}
