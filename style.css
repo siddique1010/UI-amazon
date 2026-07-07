@@ -1001,103 +1001,195 @@ footer {
     }
 }
 /* ==========================================
-   AMAZON-STYLE CLEAN MOBILE NAV — FINAL FIX
+   AMAZON-STYLE CLEAN MOBILE INTERFACE (FIX)
    ========================================== */
 @media (max-width: 768px) {
+    
+    /* --- NAVBAR VERTICAL CLEAN LAYOUT --- */
+    .navbar {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: auto !important;
+        padding: 8px 12px !important;
+        background-color: #131921 !important;
+        row-gap: 8px !important;
+    }
 
-  .navbar {
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    padding: 8px 10px !important;
-    row-gap: 8px !important;
-    column-gap: 0 !important;
-    background: #131921 !important;
-  }
+    /* Row 1 Left: Logo */
+    .nav-logo {
+        order: 1 !important;
+        height: 28px !important;
+        width: 75px !important;
+        margin-right: auto !important;
+    }
 
-  /* ---- ROW 1: Logo (left) | Sign in + Cart (right) ---- */
-  .nav-logo {
-    order: 1 !important;
-    margin-right: auto !important;
-    height: 30px !important;
-    width: 70px !important;
-  }
-  .nav-logo .logo {
-    height: 30px !important;
-    width: 70px !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-  }
+    .logo {
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        height: 100% !important;
+    }
 
-  .nav-signin {
-    order: 2 !important;
-    padding: 0 6px !important;
-  }
+    /* Row 1 Right: Sign In & Cart grouped perfectly */
+    .nav-signin {
+        order: 2 !important;
+        padding: 4px 8px !important;
+        font-size: 13px !important;
+        color: #fff !important;
+    }
 
-  .nav-return {
-    display: none !important; /* Amazon app mobile pe isay hide karta hai, hamburger menu mein hota hai */
-  }
+    .nav-signin span {
+        display: none !important; /* Mobile par "Hello, Sign in" hide hota hai */
+    }
 
-  .nav-cart {
-    order: 3 !important;
-    padding: 0 6px !important;
-  }
-  .nav-cart i {
-    font-size: 22px !important;
-  }
+    .nav-second {
+        font-size: 13px !important;
+    }
 
-  .language-selector {
-    display: none !important; /* mobile pe zaroori nahi */
-  }
+    .nav-return {
+        display: none !important; /* Amazon mobile view par ye option panel me chala jata hai */
+    }
 
-  /* ---- ROW 2: Full-width Search Bar ---- */
-  .nav-search {
-    order: 4 !important;
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    margin: 4px 0 !important;
-    height: 36px !important;
-  }
+    .language-selector {
+        display: none !important; /* Mobile layout ko clean rakhne ke liye hide */
+    }
 
-  /* ---- ROW 3: Delivery Location (Amazon-style pill row) ---- */
-  .nav-address {
-    order: 5 !important;
-    display: flex !important;
-    flex: 1 1 100% !important;
-    width: 100% !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-    background: transparent !important;
-    border: none !important;
-    padding: 4px 2px !important;
-  }
+    .nav-cart {
+        order: 3 !important;
+        padding: 4px 8px !important;
+        font-size: 13px !important;
+    }
 
-  .add-first {
-    display: none !important; /* "Delivered to" text hide, sirf icon+city dikhega jaisa Amazon karta hai */
-  }
+    .nav-cart i {
+        font-size: 24px !important;
+    }
 
-  .add-icon i {
-    font-size: 12px !important;
-    color: #ccc !important;
-  }
+    /* Row 2: Full-Width Search Bar */
+    .nav-search {
+        order: 4 !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        height: 42px !important;
+        margin: 2px 0 4px 0 !important;
+        border-radius: 6px !important;
+    }
 
-  .add-second {
-    font-size: 12px !important;
-    color: #fff !important;
-    font-weight: 400 !important;
-  }
+    .search-select {
+        display: none !important; /* Mobile search bar ko clean aur full space dene ke liye dropdown hide */
+    }
 
-  /* ---- Category Panel — horizontal scroll jaisa Amazon karta hai ---- */
-  .panel {
-    overflow-x: auto !important;
-    flex-wrap: nowrap !important;
-    justify-content: flex-start !important;
-    gap: 15px !important;
-    -ms-overflow-style: none !important;
-    scrollbar-width: none !important;
-  }
-  .panel::-webkit-scrollbar {
-    display: none !important; /* scrollbar chhupa do, sirf swipe se scroll ho */
-  }
+    .search-input {
+        font-size: 14px !important;
+        padding: 0 12px !important;
+    }
+
+    .search-icon {
+        width: 50px !important;
+        font-size: 20px !important;
+    }
+
+    /* Row 3: Deliver to Location Bar */
+    .nav-address {
+        order: 5 !important;
+        display: flex !important;
+        flex: 1 1 100% !important;
+        width: 100% !important;
+        align-items: center !important;
+        background: #1f2937 !important; /* Amazon mobile dark fluid look */
+        margin: 0 -12px -8px -12px !important; /* Full edge-to-edge touch */
+        padding: 8px 12px !important;
+    }
+
+    .add-icon {
+        gap: 5px !important;
+    }
+
+    .add-first {
+        color: #fff !important;
+        font-size: 13px !important;
+        margin-left: 0 !important;
+    }
+
+    .add-second {
+        color: #fff !important;
+        font-size: 13px !important;
+        font-weight: 500 !important;
+        margin-left: 0 !important;
+    }
+
+    /* --- HORIZONTAL SWIPE PANEL --- */
+    .panel {
+        height: 42px !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important; /* Horizontal scroll shift */
+        justify-content: flex-start !important;
+        padding: 0 10px !important;
+        gap: 15px !important;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .panel::-webkit-scrollbar {
+        display: none !important; /* Scrollbar clean look ke liye disabled */
+    }
+
+    .panel-all {
+        font-size: 13px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .panel-ops {
+        width: auto !important;
+        display: flex !important;
+        gap: 15px !important;
+    }
+
+    .panel-ops p {
+        font-size: 13px !important;
+        margin-left: 0 !important;
+        white-space: nowrap !important; /* Text to next line hone se rokega */
+    }
+
+    .panel-deals {
+        font-size: 13px !important;
+        white-space: nowrap !important;
+    }
+
+    /* --- CLEAN VERTICAL SHOPPING CARDS --- */
+    .shop-section {
+        flex-direction: column !important;
+        padding: 12px !important;
+        gap: 12px !important;
+        background: #e3e6e6 !important;
+    }
+
+    .box, .home-arrivals-card {
+        width: 100% !important;
+        min-width: 100% !important;
+        padding: 16px !important;
+        border-radius: 0px !important; /* Pure mobile responsive flat look */
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .box-content h2, .card-title {
+        font-size: 19px !important;
+        font-weight: 700 !important;
+    }
+
+    .box-image {
+        height: 240px !important;
+        margin: 12px 0 !important;
+    }
+
+    /* Grid for multi-items inside cards */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2x2 Clean grid jaisa teesri image mein hai */
+        gap: 10px !important;
+    }
+
+    .grid-image {
+        height: 110px !important;
+    }
 }
