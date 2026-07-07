@@ -94,8 +94,20 @@
     border-bottom-right-radius: 4px;
     color: #0f1111;
 }
+.nav-logo{
+    width:80px;
+}
 
-.navsearch:hover{
+.nav-cart{
+    margin-left:auto;
+}
+
+.nav-sign,
+.nav-return{
+    display:none;
+}
+
+.nav-search:hover{
     border: 2px solid orange;
 }
 
@@ -196,7 +208,13 @@ span{
     justify-content: center;
     align-items: flex-end;
 }
+@media(max-width:768px){
 
+.hero-section{
+    min-height:180px;
+}
+
+}
 .hero-msg{
     background-color: white;
     color: black;
@@ -217,25 +235,65 @@ span{
 
 /* shop section */
 
+@media(max-width:992px){
+
 .shop-section{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: #e2e7e6;
-   
-   
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
-.box{
-    /* border: 2px solid black; */
-    height: 400px;
-    width: 23%;
-    background-color: white;
-    padding: 20px 0px 15px;
-    margin-top: 15px;
-  
 }
 
+@media(max-width:576px){
+
+.shop-section{
+
+grid-template-columns:1fr;
+
+}
+
+}
+img{
+
+display:block;
+
+max-width:100%;
+
+height:auto;
+
+}
+html{
+
+overflow-x:hidden;
+
+}
+
+body{
+
+overflow-x:hidden;
+
+width:100%;
+
+}@media(max-width:768px){
+
+.foot-panel2{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:480px){
+
+.foot-panel2{
+
+grid-template-columns:1fr;
+
+}
+
+}
 .box-image{
     height: 300px;
     background-size: cover;
