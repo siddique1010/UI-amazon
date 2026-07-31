@@ -1,236 +1,200 @@
-* {
+*{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
+    border: border-box;   /* ju height width set ho gie usi ma sa text size increase decrease ho ga   */
+   
 }
 
-/* ==========================================
-   NAVBAR
-   ========================================== */
-
-.navbar {
+.navbar{
     height: 60px;
     background-color: #0f1111;
     color: white;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0 10px;
+
 }
 
-.nav-logo {
+.nav-logo{
     height: 50px;
     width: 100px;
-    flex-shrink: 0;
 }
 
-.logo {
+.logo{
     background-image: url(amazon_logo.png);
-    background-size: cover;
-    height: 50px;
-    width: 100%;
+   background-size: cover;
+   height: 50px;
+   width: 100%;
 }
 
-.border {
+.border{
     border: 1.5px solid transparent;
-    padding: 5px 8px;
+
 }
 
-.border:hover {
+.border:hover{
     border: 1.5px solid white;
 }
 
-.add-first {
+/* box 2 */
+
+.add-first{
     color: #cccccc;
-    font-size: 0.75rem;
+    font-size: 0.85rem;
     margin-left: 15px;
 }
 
-.add-second {
-    font-size: 0.9rem;
-    font-weight: 700;
+.add-second{
+   
+    font-size: 1rem;
     margin-left: 3px;
 }
 
-.add-icon {
+.add-icon{
+   display: flex;
+   align-items: center;
+}
+ 
+/* box3 */
+
+.nav-search{
     display: flex;
-    align-items: center;
-    gap: 3px;
+   justify-content: space-evenly;
+   background-color: pink;
+   width: 620px;
+   height: 40px;
+   border-radius: 4px;
 }
 
-.nav-search {
-    display: flex;
-    height: 40px;
-    width: 620px;
-    border-radius: 4px;
-    background: white;
-}
-
-.nav-search:hover {
-    border: 2px solid #febd69;
-}
-
-.search-select {
+.search-select{
+    background-color: #f3f3f3;
     width: 50px;
-    background: #f3f3f3;
-    border: none;
-    border-radius: 4px 0 0 4px;
     text-align: center;
-    font-size: 12px;
-    padding: 0 5px;
-}
-
-.search-input {
-    width: 100%;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
     border: none;
-    padding: 0 10px;
-    font-size: 14px;
-    outline: none;
 }
 
-.search-icon {
+.search-input{
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.search-icon{
     width: 45px;
-    background: #febd69;
-    border-radius: 0 4px 4px 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 1.2rem;
+    background-color: #febd68;
+     border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     color: #0f1111;
-    flex-shrink: 0;
 }
 
-.search-icon:hover {
-    background: #f3a847;
+.navsearch:hover{
+    border: 2px solid orange;
 }
+
+/* flag ka lia */
 
 .language-selector {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    padding: 8px 10px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    background: #131921;
-    color: white;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #131921; /* Amazon dark header color */
+  color: #ffffff;
+  padding: 8px 10px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  border: 1px solid transparent;
 }
 
 .language-selector:hover {
-    border: 1px solid white;
+  border: 1px solid #ffffff;
 }
 
 .flag-icon {
-    width: 20px;
-    height: 15px;
-    object-fit: cover;
+  width: 20px;
+  height: auto;
+  display: block;
 }
 
 .lang-text {
-    font-size: 13px;
-    font-weight: 700;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .dropdown-arrow {
-    font-size: 10px;
-    color: #ccc;
+  font-size: 10px;
+  color: #cccccc;
+  margin-left: 2px;
 }
 
-span {
+
+/* box 4 */
+
+span{
     font-size: 0.7rem;
-    color: #ccc;
+  
 }
 
-.nav-second {
+.nav-second{
     font-size: 0.85rem;
     font-weight: 700;
 }
 
-.nav-signin,
-.nav-return {
-    flex-shrink: 0;
-    padding: 5px 6px;
+/* box 6 */
+
+.nav-cart i{
+    font-size: 30px;
 }
 
-.nav-cart {
-    font-size: 0.85rem;
+.nav-cart{
+    font-size: 0.75rem;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    flex-shrink: 0;
-    padding: 5px 8px;
 }
 
-.nav-cart i {
-    font-size: 28px;
-}
+/* panel */
 
-/* ==========================================
-   PANEL
-   ========================================== */
-
-.panel {
+.panel{
     height: 40px;
-    background: #222f3d;
-    color: white;
+    background-color: #222f3d;
     display: flex;
+    color: white;
     align-items: center;
     justify-content: space-evenly;
-    padding: 0 10px;
 }
 
-.panel-all {
-    font-weight: 700;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 5px 8px;
-    cursor: pointer;
+.panel-ops p{
+    display: inline;
+    margin-left: 15px;
 }
 
-.panel-ops {
+.panel-ops{
     width: 70%;
     font-size: 0.85rem;
 }
 
-.panel-ops p {
-    display: inline;
-    margin-left: 15px;
-    padding: 5px 6px;
-    cursor: pointer;
-}
-
-.panel-ops p:hover {
-    text-decoration: underline;
-}
-
-.panel-deals {
+.panel-deals{
     font-size: 0.9rem;
     font-weight: 700;
-    padding: 5px 8px;
-    cursor: pointer;
 }
 
-/* ==========================================
-   HERO SECTION
-   ========================================== */
+/* hero-section */
 
-.hero-section {
+.hero-section{
     background-image: url(hero_image.jpg);
     background-size: cover;
-    background-position: center;
     height: 300px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 20px 20px;
 }
 
-.hero-msg {
-    background: white;
+.hero-msg{
+    background-color: white;
     color: black;
     height: 40px;
     display: flex;
@@ -238,1165 +202,320 @@ span {
     justify-content: center;
     font-size: 0.85rem;
     width: 80%;
-    max-width: 1400px;
-    padding: 0 15px;
-    text-align: center;
-    border-radius: 4px;
+    margin-bottom: 25px;
+
 }
 
-.hero-msg a {
-    color: #007185;
-    text-decoration: none;
-    font-weight: 600;
+.hero-msg a{
+    color:#007185;
 }
 
-.hero-msg a:hover {
-    color: #C7511F;
-}
+/* shop section */
 
-/* ==========================================
-   SHOP SECTION
-   ========================================== */
-
-.shop-section {
+.shop-section{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background: #eaeded;
-    padding: 20px;
-    gap: 20px;
+    background-color: #e2e7e6;
+   
+   
 }
 
-.box {
+.box{
+    /* border: 2px solid black; */
+    height: 400px;
     width: 23%;
-    min-width: 230px;
-    background: white;
-    padding: 20px;
-    border-radius: 6px;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+  
 }
 
-.box-content h2 {
-    font-size: 21px;
-    color: #111;
-    margin-bottom: 10px;
-}
-
-.box-image {
+.box-image{
     height: 300px;
     background-size: cover;
-    background-position: center;
-    border-radius: 4px;
-    margin: 10px 0;
+     margin-top:1rem;
+    margin-bottom: 1rem;
+   
+}
+
+.box-content{
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .box-content p {
-    color: #007185;
-    font-size: 14px;
-    font-weight: 600;
-    cursor: pointer;
+  color:#007185;
 }
 
-.box-content p:hover {
-    color: #C7511F;
-}
 
 .home-arrivals-card {
-    width: 23%;
-    min-width: 230px;
-    background: white;
+    background-color: #ffffff;
+    width: 300px;
+    height: 400px;
     padding: 20px;
-    border-radius: 6px;
+    margin-top: 15px;
+    box-sizing: border-box;
 }
 
 .card-title {
-    font-size: 21px;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0F1111;
+    margin-bottom: 12px;
+    line-height: 1.2;
 }
 
+
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.grid-item {
+    width: 48%;
+    margin-bottom: 12px;
 }
 
 .grid-image {
-    height: 120px;
+    height: 100px;
+    background-color: #F0EEE9;
     background-size: cover;
     background-position: center;
-    border-radius: 4px;
+    background-repeat: no-repeat;
+    margin-bottom: 6px;
 }
 
 .grid-label {
-    font-size: 13px;
-    color: #111;
-    margin-top: 5px;
+    font-size: 14px;
+    color: #0F1111;
+    margin: 0;
+    line-height: 1.3;
 }
 
 .shop-link {
     color: #007185;
     font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: 15px;
     cursor: pointer;
 }
 
-.shop-link:hover {
-    color: #C7511F;
-}
+/* footer */
 
-/* ==========================================
-   FOOTER
-   ========================================== */
-
-footer {
+footer{
     margin-top: 15px;
 }
 
-.foot-panel1 {
-    height: 50px;
-    background: #37475a;
+.foot-panel1{
+    background-color: #37475a;
     color: white;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 0.85rem;
 }
 
-.foot-panel1:hover {
-    background: #485769;
-}
 
-.foot-panel2 {
-    background: #222f3d;
+.foot-panel2{
+    background-color: #222f3d;
     color: white;
+    height: 300px;
     display: flex;
     justify-content: space-evenly;
-    padding: 30px 20px;
-    flex-wrap: wrap;
+    
 }
 
-.foot-panel2 ul {
-    list-style: none;
-    margin-top: 10px;
+ul {
+    margin-top: 25px ;
 }
 
-.foot-panel2 ul p {
-    font-size: 14px;
-    margin-bottom: 10px;
-    color: #dddddd;
-}
-
-.foot-panel2 ul p b {
-    color: white;
-    font-size: 16px;
+ul p{
     display: block;
-    margin-bottom: 15px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #dddddd;
+
 }
+
 
 .footer-bottom-bar {
-    background: #232F3E;
+    background-color: #232F3E;
     border-top: 1px solid #3a4553;
     padding: 30px 20px;
+    box-sizing: border-box;
 }
 
 .footer-bottom-content {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.footer-logo {
+.footer-logo{
     height: 50px;
     width: 100px;
 }
 
-.logo-image {
+.logo-image{
     background-image: url(amazon_logo.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 50px;
-    width: 100%;
+   background-size: cover;
+   height: 50px;
+   width: 100%;
 }
 
 .selector-group {
     display: flex;
     gap: 10px;
-    flex-wrap: wrap;
 }
 
 .footer-selector {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 18px;
+    background-color: transparent;
     border: 1px solid #848d99;
-    border-radius: 4px;
-    color: white;
+    border-radius: 3px;
+    padding: 10px 15px;
+    color: #ffffff;
     font-size: 14px;
     cursor: pointer;
-    background: transparent;
 }
 
 .footer-selector:hover {
-    border-color: white;
+    border-color: #ffffff;
 }
+
+.icon {
+    font-size: 16px;
+}
+
+.select-arrows {
+    font-size: 8px;
+    color: #848d99;
+    line-height: 1;
+    margin-left: 5px;
+}
+
+.currency-code {
+    font-weight: bold;
+}
+
+.flag-icon {
+    width: 20px;
+    height: auto;
+}
+
+.selector-text {
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
+
+/* .foot-panel4{
+    background-color:  hsl(221, 24%, 28%);
+    color: white;
+    height: 80px;
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.pages{
+    padding-top: 25px;
+}
+
+.copyright{
+    padding-top: 5px;
+   
+} */
 
 .footer-bottom-wrapper {
-    background: #0F1621;
-    padding: 30px 20px;
+    background-color: #0F1621;
 }
 
+/* Also See Grid */
 .also-see-section {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 20px;
+    padding: 35px 30px 25px;
+    box-sizing: border-box;
 }
 
 .also-see-column {
-    width: 13%;
+    width: 13.5%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
 .also-see-item h5 {
-    color: white;
+    color: #ffffff;
     font-size: 13px;
-    margin-bottom: 4px;
+    font-weight: bold;
+    margin: 0 0 4px 0;
 }
 
 .also-see-item p {
-    color: #999;
-    font-size: 12px;
+    color: #999999;
+    font-size: 13px;
+    font-weight: normal;
     line-height: 1.4;
+    margin: 0;
 }
 
+/* Legal Links */
 .footer-legal-section {
     text-align: center;
-    padding: 20px;
+    padding: 15px 20px 25px;
+    box-sizing: border-box;
 }
 
 .legal-links {
+    list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     gap: 18px;
-    list-style: none;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
+    padding: 0;
 }
 
 .legal-links li a {
-    color: #ccc;
+    color: #cccccc;
     font-size: 13px;
+    font-weight: normal;
     text-decoration: none;
 }
 
 .legal-links li a:hover {
-    color: white;
     text-decoration: underline;
+    color: #ffffff;
+}
+
+.ads-privacy {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.privacy-icon {
+    display: flex;
+    align-items: center;
 }
 
 .copyright-text {
-    color: #999;
+    color: #999999;
     font-size: 12px;
-}
-
-/* ==========================================
-   ===== ONLY ONE MOBILE RESPONSIVE =====
-   ========================================== */
-
-@media (max-width: 992px) {
-    .box {
-        width: 45%;
-        min-width: 200px;
-    }
-    .home-arrivals-card {
-        width: 45%;
-        min-width: 200px;
-    }
-    .box-image {
-        height: 220px;
-    }
-    .nav-search {
-        width: 400px;
-    }
-    .also-see-column {
-        width: 22%;
-    }
-}
-
-@media (max-width: 768px) {
-    /* NAVBAR */
-    .navbar {
-        flex-wrap: wrap;
-        height: auto;
-        min-height: 50px;
-        padding: 5px 8px;
-        gap: 5px;
-        justify-content: flex-start;
-    }
-
-    .nav-logo {
-        height: 30px;
-        width: 70px;
-        margin-right: auto;
-    }
-
-    .nav-logo .logo {
-        height: 30px;
-        width: 70px;
-    }
-
-    .nav-address {
-        display: none !important;
-    }
-
-    .nav-search {
-        flex: 1 1 100%;
-        order: 10;
-        width: 100%;
-        height: 34px;
-        margin: 3px 0;
-    }
-
-    .search-select {
-        width: 38px;
-        font-size: 9px;
-    }
-
-    .search-input {
-        font-size: 11px;
-        padding: 0 8px;
-    }
-
-    .search-icon {
-        width: 36px;
-        font-size: 13px;
-    }
-
-    .language-selector {
-        padding: 3px 5px;
-    }
-
-    .language-selector .flag-icon {
-        width: 14px;
-        height: 10px;
-    }
-
-    .language-selector .lang-text {
-        font-size: 10px;
-    }
-
-    .language-selector .dropdown-arrow {
-        font-size: 7px;
-    }
-
-    .nav-signin,
-    .nav-return {
-        font-size: 9px;
-        padding: 2px 3px;
-    }
-
-    .nav-signin span,
-    .nav-return span {
-        font-size: 7px;
-    }
-
-    .nav-second {
-        font-size: 10px;
-    }
-
-    .nav-cart {
-        font-size: 11px;
-        padding: 2px 4px;
-    }
-
-    .nav-cart i {
-        font-size: 20px;
-    }
-
-    /* PANEL */
-    .panel {
-        height: auto;
-        min-height: 30px;
-        flex-wrap: wrap;
-        padding: 4px 8px;
-        gap: 4px;
-        justify-content: flex-start;
-    }
-
-    .panel-all {
-        font-size: 10px;
-        padding: 2px 4px;
-    }
-
-    .panel-ops {
-        width: auto;
-        flex: 1;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 4px;
-    }
-
-    .panel-ops p {
-        font-size: 9px;
-        margin-left: 0;
-        padding: 2px 4px;
-    }
-
-    .panel-deals {
-        font-size: 9px;
-        padding: 2px 5px;
-    }
-
-    /* HERO */
-    .hero-section {
-        height: 170px;
-        padding: 0 10px 12px;
-    }
-
-    .hero-msg {
-        font-size: 10px;
-        height: auto;
-        min-height: 30px;
-        width: 95%;
-        padding: 6px 10px;
-    }
-
-    /* SHOP - VERTICAL */
-    .shop-section {
-        flex-direction: column;
-        padding: 10px;
-        gap: 12px;
-    }
-
-    .box {
-        width: 100%;
-        min-width: unset;
-        padding: 15px;
-        margin: 0;
-    }
-
-    .box-image {
-        height: 180px;
-    }
-
-    .box-content h2 {
-        font-size: 16px;
-    }
-
-    .box-content p {
-        font-size: 12px;
-    }
-
-    .home-arrivals-card {
-        width: 100%;
-        min-width: unset;
-        padding: 15px;
-        margin: 0;
-    }
-
-    .card-title {
-        font-size: 16px;
-    }
-
-    .grid-image {
-        height: 90px;
-    }
-
-    .grid-label {
-        font-size: 11px;
-    }
-
-    .shop-link {
-        font-size: 12px;
-    }
-
-    /* FOOTER */
-    .foot-panel2 {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 15px;
-        gap: 15px;
-    }
-
-    .foot-panel2 ul {
-        width: 100%;
-        text-align: center;
-    }
-
-    .foot-panel2 ul p {
-        font-size: 12px;
-    }
-
-    .foot-panel2 ul p b {
-        font-size: 14px;
-    }
-
-    .footer-bottom-content {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .selector-group {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
-    .footer-selector {
-        width: 100%;
-        justify-content: center;
-        padding: 6px 10px;
-        font-size: 11px;
-    }
-
-    .also-see-section {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .also-see-column {
-        width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-        justify-content: center;
-    }
-
-    .also-see-item {
-        width: 46%;
-        text-align: center;
-    }
-
-    .also-see-item h5 {
-        font-size: 11px;
-    }
-
-    .also-see-item p {
-        font-size: 10px;
-    }
-
-    .legal-links {
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .legal-links li a {
-        font-size: 11px;
-    }
-
-    .copyright-text {
-        font-size: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        min-height: 42px;
-        padding: 3px 4px;
-        gap: 3px;
-    }
-
-    .nav-logo {
-        height: 24px;
-        width: 55px;
-    }
-
-    .nav-logo .logo {
-        height: 24px;
-        width: 55px;
-    }
-
-    .nav-search {
-        height: 28px;
-        margin: 2px 0;
-    }
-
-    .search-select {
-        width: 32px;
-        font-size: 7px;
-    }
-
-    .search-input {
-        font-size: 9px;
-        padding: 0 6px;
-    }
-
-    .search-icon {
-        width: 30px;
-        font-size: 10px;
-    }
-
-    .language-selector {
-        padding: 2px 3px;
-    }
-
-    .language-selector .flag-icon {
-        width: 12px;
-        height: 8px;
-    }
-
-    .language-selector .lang-text {
-        font-size: 8px;
-    }
-
-    .language-selector .dropdown-arrow {
-        font-size: 6px;
-    }
-
-    .nav-signin,
-    .nav-return {
-        font-size: 7px;
-        padding: 1px 2px;
-    }
-
-    .nav-signin span,
-    .nav-return span {
-        font-size: 6px;
-    }
-
-    .nav-second {
-        font-size: 8px;
-    }
-
-    .nav-cart {
-        font-size: 9px;
-        padding: 1px 3px;
-    }
-
-    .nav-cart i {
-        font-size: 16px;
-    }
-
-    .panel {
-        min-height: 24px;
-        padding: 2px 6px;
-        gap: 3px;
-    }
-
-    .panel-all {
-        font-size: 8px;
-        padding: 1px 3px;
-    }
-
-    .panel-ops p {
-        font-size: 7px;
-        padding: 1px 3px;
-    }
-
-    .panel-deals {
-        font-size: 7px;
-        padding: 1px 4px;
-    }
-
-    .hero-section {
-        height: 130px;
-        padding: 0 5px 10px;
-    }
-
-    .hero-msg {
-        font-size: 8px;
-        min-height: 24px;
-        padding: 4px 8px;
-        width: 98%;
-    }
-
-    .shop-section {
-        padding: 5px;
-        gap: 8px;
-    }
-
-    .box {
-        padding: 10px;
-    }
-
-    .box-content h2 {
-        font-size: 14px;
-    }
-
-    .box-image {
-        height: 140px;
-    }
-
-    .box-content p {
-        font-size: 11px;
-    }
-
-    .home-arrivals-card {
-        padding: 10px;
-    }
-
-    .card-title {
-        font-size: 14px;
-    }
-
-    .grid-container {
-        grid-template-columns: 1fr;
-        gap: 6px;
-    }
-
-    .grid-image {
-        height: 70px;
-    }
-
-    .grid-label {
-        font-size: 10px;
-    }
-
-    .shop-link {
-        font-size: 11px;
-    }
-
-    .foot-panel2 ul p {
-        font-size: 11px;
-    }
-
-    .foot-panel2 ul p b {
-        font-size: 13px;
-    }
-
-    .footer-selector {
-        font-size: 10px;
-        padding: 5px 8px;
-    }
-
-    .also-see-item {
-        width: 100%;
-        text-align: center;
-    }
-
-    .also-see-item h5 {
-        font-size: 10px;
-    }
-
-    .also-see-item p {
-        font-size: 9px;
-    }
-
-    .legal-links li a {
-        font-size: 10px;
-    }
-
-    .copyright-text {
-        font-size: 9px;
-    }
-
-    .footer-logo {
-        height: 30px;
-        width: 70px;
-    }
-
-    .logo-image {
-        height: 30px;
-        width: 70px;
-    }
-}
-/* ==========================================
-   AMAZON-STYLE CLEAN MOBILE INTERFACE (FIX)
-   ========================================== */
-@media (max-width: 768px) {
-    
-    /* --- NAVBAR VERTICAL CLEAN LAYOUT --- */
-    .navbar {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        height: auto !important;
-        padding: 8px 12px !important;
-        background-color: #131921 !important;
-        row-gap: 8px !important;
-    }
-
-    /* Row 1 Left: Logo */
-    .nav-logo {
-        order: 1 !important;
-        height: 28px !important;
-        width: 75px !important;
-        margin-right: auto !important;
-    }
-
-    .logo {
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-        height: 100% !important;
-    }
-
-    /* Row 1 Right: Sign In & Cart grouped perfectly */
-    .nav-signin {
-        order: 2 !important;
-        padding: 4px 8px !important;
-        font-size: 13px !important;
-        color: #fff !important;
-    }
-
-    .nav-signin span {
-        display: none !important; /* Mobile par "Hello, Sign in" hide hota hai */
-    }
-
-    .nav-second {
-        font-size: 13px !important;
-    }
-
-    .nav-return {
-        display: none !important; /* Amazon mobile view par ye option panel me chala jata hai */
-    }
-
-    .language-selector {
-        display: none !important; /* Mobile layout ko clean rakhne ke liye hide */
-    }
-
-    .nav-cart {
-        order: 3 !important;
-        padding: 4px 8px !important;
-        font-size: 13px !important;
-    }
-
-    .nav-cart i {
-        font-size: 24px !important;
-    }
-
-    /* Row 2: Full-Width Search Bar */
-    .nav-search {
-        order: 4 !important;
-        flex: 1 1 100% !important;
-        width: 100% !important;
-        height: 42px !important;
-        margin: 2px 0 4px 0 !important;
-        border-radius: 6px !important;
-    }
-
-    .search-select {
-        display: none !important; /* Mobile search bar ko clean aur full space dene ke liye dropdown hide */
-    }
-
-    .search-input {
-        font-size: 14px !important;
-        padding: 0 12px !important;
-    }
-
-    .search-icon {
-        width: 50px !important;
-        font-size: 20px !important;
-    }
-
-    /* Row 3: Deliver to Location Bar */
-    .nav-address {
-        order: 5 !important;
-        display: flex !important;
-        flex: 1 1 100% !important;
-        width: 100% !important;
-        align-items: center !important;
-        background: #1f2937 !important; /* Amazon mobile dark fluid look */
-        margin: 0 -12px -8px -12px !important; /* Full edge-to-edge touch */
-        padding: 8px 12px !important;
-    }
-
-    .add-icon {
-        gap: 5px !important;
-    }
-
-    .add-first {
-        color: #fff !important;
-        font-size: 13px !important;
-        margin-left: 0 !important;
-    }
-
-    .add-second {
-        color: #fff !important;
-        font-size: 13px !important;
-        font-weight: 500 !important;
-        margin-left: 0 !important;
-    }
-
-    /* --- HORIZONTAL SWIPE PANEL --- */
-    .panel {
-        height: 42px !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important; /* Horizontal scroll shift */
-        justify-content: flex-start !important;
-        padding: 0 10px !important;
-        gap: 15px !important;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .panel::-webkit-scrollbar {
-        display: none !important; /* Scrollbar clean look ke liye disabled */
-    }
-
-    .panel-all {
-        font-size: 13px !important;
-        flex-shrink: 0 !important;
-    }
-
-    .panel-ops {
-        width: auto !important;
-        display: flex !important;
-        gap: 15px !important;
-    }
-
-    .panel-ops p {
-        font-size: 13px !important;
-        margin-left: 0 !important;
-        white-space: nowrap !important; /* Text to next line hone se rokega */
-    }
-
-    .panel-deals {
-        font-size: 13px !important;
-        white-space: nowrap !important;
-    }
-
-    /* --- CLEAN VERTICAL SHOPPING CARDS --- */
-    .shop-section {
-        flex-direction: column !important;
-        padding: 12px !important;
-        gap: 12px !important;
-        background: #e3e6e6 !important;
-    }
-
-    .box, .home-arrivals-card {
-        width: 100% !important;
-        min-width: 100% !important;
-        padding: 16px !important;
-        border-radius: 0px !important; /* Pure mobile responsive flat look */
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-
-    .box-content h2, .card-title {
-        font-size: 19px !important;
-        font-weight: 700 !important;
-    }
-
-    .box-image {
-        height: 240px !important;
-        margin: 12px 0 !important;
-    }
-
-    /* Grid for multi-items inside cards */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr) !important; /* 2x2 Clean grid jaisa teesri image mein hai */
-        gap: 10px !important;
-    }
-
-    .grid-image {
-        height: 110px !important;
-    }
-}
-/* ==========================================================================
-   FINAL FIXED: AMAZON EXACT CLEAN MOBILE UI LAYOUT (ADD AT THE BOTTOM)
-   ========================================================================== */
-
-@media (max-width: 768px) {
-    /* 1. NAVBAR - Clean Rows Structure */
-    .navbar {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        height: auto !important;
-        padding: 6px 12px !important;
-        background-color: #131921 !important;
-        row-gap: 6px !important;
-    }
-
-    /* Row 1 Left: Perfect Logo sizing */
-    .nav-logo {
-        order: 1 !important;
-        height: 25px !important;
-        width: 65px !important;
-        margin-right: auto !important;
-    }
-
-    .logo {
-        height: 100% !important;
-        width: 100% !important;
-        background-size: contain !important;
-        background-repeat: no-repeat !important;
-    }
-
-    /* Row 1 Right: Align Accounts & Cart horizontally */
-    .nav-signin {
-        order: 2 !important;
-        padding: 4px 6px !important;
-        white-space: nowrap !important;
-    }
-
-    .nav-signin span {
-        display: none !important; /* Mobile pe "Hello" hide hota hai, clean look ke liye */
-    }
-
-    .nav-second {
-        font-size: 13px !important;
-        font-weight: 500 !important;
-        color: #fff !important;
-    }
-
-    .nav-return, .language-selector {
-        display: none !important; /* Mobile layout se extra clutter remove */
-    }
-
-    .nav-cart {
-        order: 3 !important;
-        padding: 4px 6px !important;
-        font-size: 13px !important;
-    }
-
-    .nav-cart i {
-        font-size: 22px !important;
-    }
-
-    /* Row 2: Full-Width Independent Search Bar */
-    .nav-search {
-        order: 4 !important;
-        flex: 1 1 100% !important;
-        width: 100% !important;
-        height: 38px !important;
-        margin: 2px 0 !important;
-        border-radius: 4px !important;
-    }
-
-    .search-select {
-        display: none !important; /* Mobile screen space bachane ke liye category dropdown hide */
-    }
-
-    .search-input {
-        font-size: 14px !important;
-        padding: 0 10px !important;
-    }
-
-    .search-icon {
-        width: 42px !important;
-        font-size: 16px !important;
-    }
-
-    /* 2. DELIVERY ADDRESS - Separate full-width location panel */
-    .nav-address {
-        order: 5 !important;
-        display: flex !important;
-        flex: 1 1 100% !important;
-        width: 100% !important;
-        background: #1f2937 !important; /* Target standard light gray/dark tone overlay */
-        margin: 4px -12px -6px -12px !important; /* Screen edge-to-edge flush layout */
-        padding: 8px 12px !important;
-        align-items: center !important;
-    }
-
-    .add-icon {
-        display: flex !important;
-        align-items: center !important;
-        gap: 4px !important;
-    }
-
-    .add-first {
-        font-size: 12px !important;
-        color: #ccc !important;
-        margin-left: 0 !important;
-    }
-
-    .add-second {
-        font-size: 12px !important;
-        color: #fff !important;
-        font-weight: 500 !important;
-        margin-left: 0 !important;
-    }
-
-    /* 3. CATEGORY PANEL - Clean horizontal slide (No Text Overlapping!) */
-    .panel {
-        height: 38px !important;
-        display: flex !important;
-        flex-wrap: nowrap !important; /* Row wrapping disabled to protect content layout */
-        overflow-x: auto !important; /* Enables smooth swiping on mobile */
-        justify-content: flex-start !important;
-        gap: 16px !important;
-        padding: 0 12px !important;
-        background: #232f3e !important;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .panel::-webkit-scrollbar {
-        display: none !important; /* Hides horizontal scrollbar bar track for native look */
-    }
-
-    .panel-all {
-        font-size: 13px !important;
-        flex-shrink: 0 !important;
-    }
-
-    .panel-ops {
-        width: auto !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        gap: 16px !important;
-    }
-
-    .panel-ops p {
-        font-size: 13px !important;
-        margin-left: 0 !important;
-        white-space: nowrap !important; /* Text block wrapping fix */
-        display: inline-block !important;
-    }
-
-    .panel-deals {
-        font-size: 13px !important;
-        white-space: nowrap !important;
-        flex-shrink: 0 !important;
-    }
-
-    /* 4. MAIN HERO SECTION BACKGROUND FIXED */
-    .hero-section {
-        height: 180px !important;
-        padding: 0 10px 10px !important;
-    }
-
-    .hero-msg {
-        font-size: 11px !important;
-        width: 100% !important;
-        padding: 6px !important;
-        height: auto !important;
-    }
-
-    /* 5. SHOP CARDS SECTION - Stacking properly vertically */
-    .shop-section {
-        flex-direction: column !important;
-        padding: 10px !important;
-        gap: 10px !important;
-    }
-
-    .box, .home-arrivals-card {
-        width: 100% !important;
-        min-width: 100% !important;
-        margin: 0 !important;
-        padding: 14px !important;
-        border-radius: 4px !important;
-    }
-
-    .box-content h2, .card-title {
-        font-size: 18px !important;
-    }
-
-    .box-image {
-        height: 200px !important;
-    }
-
-    /* Inside Grid Items Layout (Like Image 3) */
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 8px !important;
-    }
-
-    .grid-image {
-        height: 100px !important;
-    }
+    margin: 0;
 }
